@@ -1,3 +1,97 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL                = "https://delightful-desert-0809eba03.4.azurestaticapps.net/"
+title                  = "Fundacja CoderDojo Polska"
+theme                  = "introduction"
+DefaultContentLanguage = "pl"
+
+[params]
+    themeStyle         = "auto"         # "light", "dark", or "auto"
+    favicon            = "/img/fav.ico"
+    showMenu           = true
+    showRSSButton      = false
+    fadeIn             = true
+    fadeInIndex        = false
+    dateFormat         = "02 Jan 2006"   # Adjust to your preferred date format in PL
+    email              = "dojo@coderdojo.org.pl"  # Update to your actual contact email
+
+    # Home page settings
+    [params.home]
+        introHeight              = "fullheight"
+        showLatest               = true
+        showAllPosts             = false
+        allPostsArchiveFormat    = true
+        numberOfProjectsToShow   = 3
+        localTime                = true
+        timeZone                 = "Europe/Warsaw" 
+        timeFormat               = "pl-PL"          # for local time format
+
+    [params.projects]
+        useTwoColumns            = false            # Use a two- or three-column layout for projects
+
+    # Sharing buttons on blog post pages
+    [params.share]
+        twitter                  = true
+        facebook                 = true
+        pinterest                = true
+
+    # Optional: Giscus config for comments (leave commented out if not needed)
+    # [params.giscus]
+    #     repo                   = "github-user/github-repo"
+    #     repo-id               = "enter-repo-id"
+    #     category              = "Comments"
+    #     category-id           = "enter-category-id"
+    #     mapping               = "pathname"
+    #     reactions-enabled     = "1"
+    #     emit-metadata         = "0"
+    #     theme                 = "light"
+    #     lang                  = "pl"
+
+    # Social icons (FontAwesome). Update or remove as needed.
+    [[params.social]]
+        url       = "https://twitter.com/coderdojopl"
+        icon      = "twitter"
+        icon_pack = "fab"
+    [[params.social]]
+        url       = "https://www.facebook.com/CoderDojoPL/"
+        icon      = "facebook-f"
+        icon_pack = "fab"
+    [[params.social]]
+        url       = "https://pl.linkedin.com/company/fundacja-coderdojo-polska"
+        icon      = "linkedin-in"
+        icon_pack = "fab"
+    [[params.social]]
+        url       = "mailto:dojo@coderdojo.org.pl"
+        icon      = "paper-plane"
+        icon_pack = "fas"
+
+# Taxonomies (tags, etc.)
+[taxonomies]
+  tag    = "tags"
+  series = "series"
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    codeFences            = true
+    guessSyntax           = false
+    lineNoStart           = 1
+    lineNos               = false
+    lineNumbersInTable    = true
+    style                 = "solarized-dark"
+    tabWidth              = 4
+
+# Configure languages
+[languages]
+
+  # Only Polish
+  [languages.pl]
+    languageName         = "Polski"
+    languageCode         = "pl"
+    contentDir           = "content/pl"
+    weight               = 0
+    title                = "Fundacja CoderDojo Polska"
+    [languages.pl.params]
+      description        = "Fundacja CoderDojo Polska – oficjalna strona"
+      # footerText        = "© 2024 Fundacja CoderDojo Polska. Wszelkie prawa zastrzeżone."
+
